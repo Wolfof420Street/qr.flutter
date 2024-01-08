@@ -56,6 +56,17 @@ enum QrDataModuleShape {
   circle,
 }
 
+/// Enumeration representing the shape of the Embedded Image
+
+enum EmbeddedImageShape {
+
+  /// Use square shape
+  square,
+
+   /// Use circle shape.
+  circle,
+}
+
 /// Styling options for finder pattern eye.
 @immutable
 class QrEyeStyle {
@@ -123,6 +134,8 @@ class QrEmbeddedImageStyle {
 
   /// Color to tint the image.
   final Color? color;
+
+  final EmbeddedImageShape? shape;
 
   /// Check to see if the style object has a non-null, non-zero size.
   bool get hasDefinedSize => size != null && size!.longestSide > 0;
